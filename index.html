@@ -350,7 +350,7 @@ section.about h2 {
 <!-- 🔹 Главная секция -->
 <section class="hero" id="home">
     <h2>Точный термин - здесь и сейчас</h2>
-    <p>Мы поможем вам с переводом слов в профессиональной сфере</p>
+    <p>Мы поможем вам с переводом слов в профессиональной сфере.</p>
     <a href="#box" class="btn">К переводу!</a>
 </section>
 <section class="about" id="about">
@@ -478,40 +478,49 @@ section.about h2 {
     }
 
     function translateWord() {
-        const input = document.getElementById('word').value.trim().toLowerCase();
-        const resultEl = document.getElementById('result');
+    const input = document.getElementById('word').value.trim().toLowerCase();
+    const resultEl = document.getElementById('result');
 
-        if (!input) {
-            resultEl.textContent = "⚠️ Введите слово!";
-            return;
+    // Проверка на пустое поле
+    if (!input) {
+        resultEl.textContent = "⚠️ Введите слово!";
+        return;
+    }
+
+    const lang = detectLanguage(input);
+    let data = null;
+
+    // Поиск перевода для английского слова
+    if (lang === "en") {
+        data = dictionary[input] || null;
+    } else {
+        // Поиск перевода для русского слова
+        const foundKey = Object.keys(dictionary).find(key => dictionary[key].translation.toLowerCase() === input);
+        if (foundKey) {
+            data = {
+                translation: foundKey,
+                back: dictionary[foundKey].translation,
+                image: dictionary[foundKey].image
+            };
         }
+    }
 
-        const lang = detectLanguage(input);
-        let data = null;
-        if (lang === "en") {
-            data = dictionary[input] || null;
-        } else {
-            const foundKey = Object.keys(dictionary).find(key => dictionary[key].translation.toLowerCase() === input);
-            if (foundKey) {
-                data = {
-                    translation: foundKey,
-                    back: dictionary[foundKey].translation,
-                    image: dictionary[foundKey].image
-                };
-            }
-        }
+    // Если перевод не найден, показываем сообщение
+    if (!data) {
+        resultEl.textContent = "❌ Перевод не найден.";
+    } else {
+        // Если перевод найден, обновляем результат
+        resultEl.textContent = "Перевод: " + data.translation + " — " + data.back;
+    }
 
-        if (!data) {
-            resultEl.textContent = "❌ Перевод не найден.";
-            return;
-        }
-
-        // Показ в модальном окне
+    // Показ в модальном окне
+    if (data) {
         document.getElementById("modal-word").textContent = input;
         document.getElementById("modal-translation").textContent = data.translation + " — " + data.back;
         document.getElementById("modal-image").src = data.image;
         modal.style.display = "block";
     }
+}
 
     // Закрытие окна
     closeBtn.onclick = () => modal.style.display = "none";
