@@ -81,6 +81,7 @@
         section.about {
             padding: 50px 20px;
             text-align: center;
+            font-size: 22px;
         }
 section.about h2 {
     font-size: 30px; /* меняй цифру на нужный размер */
@@ -128,6 +129,7 @@ section.about h2 {
     margin-left: auto;
     margin-right: auto;    /* центрируем картинку */
 }
+
         /* 🔹 Переводчик */
         #box {
             background: white;
@@ -139,6 +141,22 @@ section.about h2 {
             margin: 0 auto 50px auto;
         }
 
+
+        .text-between {
+            padding: 30px;
+        
+            text-align: center;
+            margin: 40px 0;
+            font-size: 22px;
+        }
+
+        .additional-text {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            font-size: 1.5 rem;
+        }
         #box h1 {
             font-size: 28px;
             margin-bottom: 20px;
@@ -258,36 +276,45 @@ section.about h2 {
         <ul>
             <li><a href="#home">Главная</a></li>
             <li><a href="#about">О нас</a></li>
-            <li><a href="#box">Эквиволент</a></li>
+            <li><a href="#box">Эквивалент</a></li>
         </ul>
     </nav>
 </header>
 
 <!-- 🔹 Главная секция -->
 <section class="hero" id="home">
-    <h2>Учи английский ещё быстрее</h2>
-    <p>Мы поможем вам с переводом слов в профессиональной сфере</p>
+    <h2>Точный термин - здесь и сейчас</h2>
+    <p>Мы поможем вам с переводом слов в профессиональной сфере.</p>
     <a href="#box" class="btn">К переводу!</a>
 </section>
+<section class="about" id="about">
+    <h2> О нас </h2>
+    <p>Над приложением FireGuard Dictionary App работает команда Санкт-Петербургского университета ГПС МЧС России. Мы совмещаем академические знания в области лингвистики, лексикографии и информационных технологий с практическим опытом подготовки спасательных кадров, чтобы создать надежного цифрового напарника для тех, кто первым приходит на помощь.
+Приложение FireGuard Dictionary App родилось из понимания острой необходимости в надежном инструменте для международного взаимодействия в зонах чрезвычайных ситуаций. Уникальная терминологическая база приложения формировалась на протяжении пяти лет (2020-2025 гг.) слушателями программы ДПО «Переводчик в сфере профессиональной коммуникации». 
+Наша цель – не просто найти лексический эквивалент, а обеспечить точную передачу смысла, где от значения слова зависит результат работы. Мы верим, что технологии должны служить благородному делу спасения жизней, стирая языковые барьеры на пути у профессионалов.
+В ближайшее время в приложение будет загружена основная база терминов, а в дальнейшем мы будем постоянно пополнять и актуализировать словарь, чтобы он оставался вашим надежным партнером в любой точке земного шара.
+Наш девиз: Точный термин – здесь и сейчас
+</p>
+
 
 <!-- 🔹 О нас -->
-<section class="about" id="about">
+
     <h2>Как работает наше приложение</h2>
     <div class="features">
     <div class="feature">
         <img src="https://cdn-icons-png.flaticon.com/512/12628/12628496.png" alt="Быстро">
         <h3>🚀 Быстро</h3>
-        <p>Вводим слово</p>
+        <p>Вводим слово.</p>
     </div>
     <div class="feature">
         <img src="https://cdn-icons-png.flaticon.com/512/4251/4251899.png" alt="Самоподготовка">
-        <h3>🎨 Самоподготовка</h3>
-        <p>Таблица для изучения слов самостоятельно</p>
+        <h3>🎨 Поиск терминов по категориям</h3>
+        <p>Таблица для изучения слов самостоятельно.</p>
     </div>
     <div class="feature">
         <img src="https://cdn-icons-png.flaticon.com/512/5625/5625642.png" alt="Просто">
         <h3>💡 Просто</h3>
-        <p>Нажимаем найти и получаем перевод</p>
+        <p>Нажимаем найти и получаем перевод.</p>
     </div>
 </div>
 </section>
@@ -329,7 +356,45 @@ section.about h2 {
         "smoke detector": { translation: "дымовой извещатель", back: "smoke detector", image: "https://img.freepik.com/premium-vector/smoke-detector-icon-symbol-fire-alarm-logo-sign-fire-safety-equipment-vector-illustration-image_246263-613.jpg" },
         "fire engine": { translation: "пожарная машина", back: "fire engine", image: "https://www.unfire01.ru/uploads/pics/mashina-kamaz-ac-50-40-unfire01.ru_01.jpg" },
         "ladder truck": { translation: "автолестница", back: "ladder truck", image: "https://media.istockphoto.com/id/1290261558/vector/red-fire-truck-vehicle-of-emergency-firefighters-design-element-side-view-vector.jpg?s=612x612&w=0&k=20&c=HVw7AZ4ZiAag6QFr4hWoyWk4o-elO97GMvigOZD7eeg=" },
-        "tanker": { translation: "автоцистерна", back: "tanker", image: "https://kamaz-chel.ru/upload/iblock/a4d/z2j8pjx6swlm45o67uv032s5o2pl8s83.png" }
+        "tanker": { translation: "автоцистерна", back: "tanker", image: "https://kamaz-chel.ru/upload/iblock/a4d/z2j8pjx6swlm45o67uv032s5o2pl8s83.png" },
+        "power saw": { translation: "бензорез", back: "power saw" },
+"ring saw": { translation: "кольцерез", back: "ring saw" },
+"rescue chainsaw": { translation: "аварийно-спасательная бензопила", back: "rescue chainsaw" },
+"reciprocating saw": { translation: "сабельная пила", back: "reciprocating saw" },
+"rescue winch": { translation: "аварийно-спасательная лебёдка", back: "rescue winch" },
+"concrete breaker": { translation: "бетонолом", back: "concrete breaker" },
+"rotary hammer": { translation: "перфоратор", back: "rotary hammer" },
+"diamond core drill": { translation: "алмазная дрель", back: "diamond core drill" },
+"hydraulic concrete crusher": { translation: "гидравлическая бетонодробилка", back: "hydraulic concrete crusher" },
+"hydraulic spreading wedge": { translation: "гидравлический клин", back: "hydraulic spreading wedge" },
+"high-pressure pneumatic lifting bag": { translation: "пневматический домкрат высокого давления", back: "high-pressure pneumatic lifting bag" },
+"low-pressure pneumatic lifting bag": { translation: "пневматический домкрат низкого давления", back: "low-pressure pneumatic lifting bag" },
+"pneumatic sealing device": { translation: "пневматические заглушки, пластыри, клинья", back: "pneumatic sealing device" },
+"wedge / shim / step block": { translation: "клинья, проставки, ступенчатые упоры", back: "wedge / shim / step block" },
+"stabilization strut": { translation: "стойка стабилизации", back: "stabilization strut" },
+"prefabricated and timber shoring structures": { translation: "возводимые инвентарные и деревянные конструкции (шоринг)", back: "prefabricated and timber shoring structures" },
+"SearchCam 3000": { translation: "телевизионный прибор поиска пострадавших SearchCam 3000", back: "SearchCam 3000" },
+"Delsar LifeDetector LD3": { translation: "виброакустическое устройство Delsar LifeDetector LD3", back: "Delsar LifeDetector LD3" },
+"RD-400 radar detector": { translation: "радар-детектор РД-400", back: "RD-400 radar detector" },
+ "Hydraulic cutters": { translation: "Гидравлические ножницы", back: "Hydraulic cutters" },
+"Hydraulic saws": { translation: "Гидравлические пилы (дисковые, цепные)", back: "Hydraulic saws" },
+"Hydraulic spreaders": { translation: "Гидравлические расширители (спредеры)", back: "Hydraulic spreaders" },
+"Hydraulic combination tools": { translation: "Комбинированные инструменты (кусачки-расширители)", back: "Hydraulic combination tools" },
+"Hydraulic jacks": { translation: "Гидравлические домкраты (рамные подъемники)", back: "Hydraulic jacks" },
+"Hydraulic rams": { translation: "Гидравлические силовые цилиндры (цилиндры высокого давления)", back: "Hydraulic rams" },
+"Hydraulic power units": { translation: "Гидравлические станции", back: "Hydraulic power units" },
+"High-pressure hoses": { translation: "Рукава высокого давления (РВД)", back: "High-pressure hoses" },
+"Quick-release couplings": { translation: "Быстросъемные соединения", back: "Quick-release couplings" },
+"Strut and accessory kits": { translation: "Комплекты упоров и насадок", back: "Strut and accessory kits" },
+"Manual hydraulic pump": { translation: "Ручной гидравлический насос", back: "Manual hydraulic pump" },
+"Electro-hydraulic power unit": { translation: "Электрогидравлическая станция", back: "Electro-hydraulic power unit" },
+"Petrol-driven hydraulic power unit": { translation: "Бензогидравлическая станция", back: "Petrol-driven hydraulic power unit" },
+"firefighter axe": { translation: "пожарный топор", back: "firefighter axe" },
+"pickhead axe": { translation: "пожарный топор-кувалда", back: "pickhead axe" },
+"pry bar": { translation: "пожарный лом", back: "pry bar" },
+"pike pole": { translation: "пожарный багор", back: "pike pole" },
+"Halligan bar": { translation: "инструмент Хулиган (Halligan Tool)", back: "Halligan bar" },
+
     
     };
 
@@ -388,5 +453,4 @@ section.about h2 {
 </script>
 
 </body>
-
 </html>
